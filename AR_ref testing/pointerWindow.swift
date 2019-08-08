@@ -170,7 +170,7 @@ class pointerWindow: NSViewController {
         ButtonNext.isHidden = true
         seldEvaluateSlider.isHidden = true
         ButtonGotIt.isHidden = false
-        myStaticValues.buttonStartBol = !myStaticValues.buttonStartBol
+        myStaticValues.buttonStartBol = true
         //allButtonShow()
         
     }

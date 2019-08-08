@@ -30,7 +30,6 @@ class ViewController: NSViewController {
         
     }
     @IBAction func clickStartButton(_ sender: Any) {
-        
         let displayNumber = count % 103
         let number = arrayOfNumber[displayNumber]
         numberDisplay.stringValue = String(number)
@@ -39,8 +38,10 @@ class ViewController: NSViewController {
         let time = NSDate().timeIntervalSince1970 * 1000
         myStaticValues.firstTimeInterval = String(time)
         //buttonStart.isHidden = true
-        buttonStart.isEnabled = myStaticValues.buttonStartBol
+        buttonStart.isEnabled = false
+        myStaticValues.buttonStartBol = false
         timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(buttonDisable), userInfo: nil, repeats: true)
+
         
         
     }
