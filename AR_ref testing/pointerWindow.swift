@@ -28,7 +28,13 @@ class pointerWindow: NSViewController {
     @IBOutlet weak var Button15: NSButton!
     @IBOutlet weak var Button16: NSButton!
     @IBOutlet weak var ButtonGotIt: NSButton!
+    
     @IBOutlet weak var seldEvaluateSlider: NSSlider!
+    @IBOutlet weak var minLab: NSTextField!
+    @IBOutlet weak var maxLab: NSTextField!
+    
+    
+    
     @IBOutlet weak var ButtonNext: NSButton!
     
     override func viewDidAppear() {
@@ -49,7 +55,8 @@ class pointerWindow: NSViewController {
         Button15.image = NSImage(named: NSImage.Name(rawValue: "pic15"))
         Button16.image = NSImage(named: NSImage.Name(rawValue: "pic16"))
         ButtonGotIt.image = NSImage(named: NSImage.Name(rawValue: "picGot"))
-        ButtonNext.image = NSImage(named: NSImage.Name(rawValue: "buttonImage1"))
+        //ButtonNext.image = NSImage(named: NSImage.Name(rawValue: "buttonImage1"))
+        ButtonNext.image = NSImage(named: NSImage.Name(rawValue: "nextButton"))
         
         Button1.isHidden = true
         Button2.isHidden = true
@@ -70,6 +77,8 @@ class pointerWindow: NSViewController {
         
         
         seldEvaluateSlider.isHidden = true
+        minLab.isHidden = true
+        maxLab.isHidden = true
         ButtonNext.isHidden = true
     }
     
@@ -148,7 +157,7 @@ class pointerWindow: NSViewController {
     @IBAction func ClickButtonNext(_ sender: Any) {
         let tempUrl = "file://" + myStaticValues.csvFilePath
         let csvUrl = URL(string: tempUrl)
-        
+        myStaticValues.selfEvaluate = seldEvaluateSlider.stringValue
         do{
             let csvContent = try NSString(contentsOfFile: myStaticValues.csvFilePath, encoding:String.Encoding.utf8.rawValue)
             let temDataOne = myStaticValues.correct + "," + myStaticValues.answer
@@ -169,6 +178,8 @@ class pointerWindow: NSViewController {
         }
         ButtonNext.isHidden = true
         seldEvaluateSlider.isHidden = true
+        minLab.isHidden = true
+        maxLab.isHidden = true
         ButtonGotIt.isHidden = false
         myStaticValues.buttonStartBol = true
         //allButtonShow()
@@ -218,6 +229,8 @@ class pointerWindow: NSViewController {
         ButtonGotIt.isHidden = true
         ButtonNext.isHidden = false
         seldEvaluateSlider.isHidden = false
+        minLab.isHidden = false
+        maxLab.isHidden = false
 
     }
     func allButtonShow(){
@@ -239,6 +252,8 @@ class pointerWindow: NSViewController {
         Button16.isHidden = false
         ButtonGotIt.isHidden = false
         seldEvaluateSlider.isHidden = true
+        minLab.isHidden = true
+        maxLab.isHidden = true
         ButtonNext.isHidden = true
     }
     

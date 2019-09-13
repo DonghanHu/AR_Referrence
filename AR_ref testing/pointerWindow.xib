@@ -26,6 +26,8 @@
                 <outlet property="Button9" destination="Qyh-BZ-vRf" id="JLQ-Mc-det"/>
                 <outlet property="ButtonGotIt" destination="rnI-P1-gMV" id="kOq-8s-DDu"/>
                 <outlet property="ButtonNext" destination="SQQ-QI-Iwp" id="cXC-YX-YcP"/>
+                <outlet property="maxLab" destination="jaG-XB-xFB" id="H70-qn-9Ns"/>
+                <outlet property="minLab" destination="GkP-IE-X1p" id="cd0-Rg-csB"/>
                 <outlet property="seldEvaluateSlider" destination="f9N-wb-jYH" id="adc-V0-4ne"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -223,11 +225,6 @@
                         <action selector="ClickButtonGot:" target="-2" id="1Fa-8z-d2l"/>
                     </connections>
                 </button>
-                <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f9N-wb-jYH">
-                    <rect key="frame" x="61" y="190" width="370" height="24"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <sliderCell key="cell" state="on" alignment="left" minValue="1" maxValue="7" doubleValue="3.5" tickMarkPosition="below" numberOfTickMarks="7" sliderType="linear" id="2Tq-vF-2R3"/>
-                </slider>
                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SQQ-QI-Iwp" userLabel="ButtonNext">
                     <rect key="frame" x="273" y="11" width="187" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -239,6 +236,29 @@
                         <action selector="ClickButtonNext:" target="-2" id="xFF-WH-ohc"/>
                     </connections>
                 </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GkP-IE-X1p">
+                    <rect key="frame" x="51" y="224" width="137" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="1" id="RTR-9T-ipp">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jaG-XB-xFB">
+                    <rect key="frame" x="411" y="220" width="12" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="7" id="OTT-hn-wFz">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f9N-wb-jYH">
+                    <rect key="frame" x="63" y="190" width="370" height="24"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <sliderCell key="cell" state="on" alignment="left" minValue="1" maxValue="7" doubleValue="3.5" tickMarkPosition="below" numberOfTickMarks="7" sliderType="linear" id="2Tq-vF-2R3"/>
+                </slider>
             </subviews>
             <point key="canvasLocation" x="125" y="202"/>
         </customView>
